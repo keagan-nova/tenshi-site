@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keagan Hall — Tenshi Marketing</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0A0A0A;
+      color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 40px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #3B82F6;
+    }
+    .nav-cta {
+      background: #3B82F6;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: #2563EB; }
+
+    /* SECTIONS */
+    section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: #1a1a2e;
+      border: 2px solid #3B82F6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #3B82F6;
+      margin: 0 auto 28px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: #3B82F6; }
+    .hero p {
+      font-size: 18px;
+      color: #999;
+      max-width: 560px;
+      margin: 0 auto 36px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #3B82F6;
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #2563EB; }
+    .sub-cta {
+      display: block;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    /* SECTION HEADERS */
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #3B82F6;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .section-sub {
+      color: #888;
+      font-size: 16px;
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+
+    /* WHO I WORK WITH */
+    .niche-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .niche-card {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 10px;
+      padding: 28px 24px;
+    }
+    .niche-card .icon { font-size: 28px; margin-bottom: 12px; }
+    .niche-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .niche-card p { font-size: 14px; color: #777; }
+
+    /* PROCESS */
+    .steps { display: flex; flex-direction: column; gap: 24px; margin-top: 40px; }
+    .step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      min-width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #0f1f3d;
+      border: 2px solid #3B82F6;
+      color: #3B82F6;
+      font-weight: 800;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step-content h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .step-content p { font-size: 14px; color: #777; }
+
+    /* MECHANISM */
+    .mechanism-box {
+      background: #0f1a2e;
+      border: 1px solid #1e3a6e;
+      border-radius: 12px;
+      padding: 40px;
+      margin-top: 40px;
+    }
+    .mechanism-box h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #3B82F6;
+      margin-bottom: 16px;
+    }
+    .mechanism-box p { color: #aaa; font-size: 15px; margin-bottom: 16px; }
+    .mechanism-points { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .mechanism-points li {
+      display: flex;
+      gap: 12px;
+      font-size: 15px;
+      color: #ccc;
+    }
+    .mechanism-points li::before {
+      content: "→";
+      color: #3B82F6;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* COMMITMENT */
+    .commitment-box {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-left: 4px solid #3B82F6;
+      border-radius: 8px;
+      padding: 32px;
+      margin-top: 40px;
+    }
+    .commitment-box p { color: #aaa; font-size: 15px; line-height: 1.8; }
+    .commitment-box strong { color: #fff; }
+
+    /* ABOUT */
+    .about-inner {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+      margin-top: 40px;
+    }
+    .about-avatar {
+      min-width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: #1a1a2e;
+      border: 2px solid #3B82F6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 700;
+      color: #3B82F6;
+    }
+    .about-text h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .about-text p { font-size: 15px; color: #888; line-height: 1.7; }
+
+    /* FINAL CTA */
+    .cta-section {
+      text-align: center;
+      background: #0f1a2e;
+      border: 1px solid #1e3a6e;
+      border-radius: 16px;
+      padding: 64px 40px;
+      margin: 0 24px 80px;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-section h2 { margin-bottom: 16px; }
+    .cta-section p { color: #888; font-size: 16px; max-width: 500px; margin: 0 auto 32px; }
+    .objection {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #555;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid #1a1a1a;
+      font-size: 13px;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .about-inner { flex-direction: column; }
+      .mechanism-box { padding: 24px; }
+      .cta-section { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Tenshi Marketing</div>
+    <a class="nav-cta" href="https://calendly.com/keaganhall67/30min" target="_blank">Book a Free Call</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="avatar">KH</div>
+    <h1>I Help Home Service Businesses in Utah<br><span>Stop Losing Leads Online</span></h1>
+    <p>Most local businesses are invisible online and don't know it. I find exactly what's broken, fix it completely, and then run ads on top of a solid foundation.</p>
+    <a class="btn-primary" href="https://calendly.com/keaganhall67/30min" target="_blank">Book a Free Strategy Call</a>
+    <span class="sub-cta">No pitch. Just an honest look at what's costing you leads right now.</span>
+  </section>
+  <hr class="divider" />
+
+  <!-- WHO I WORK WITH -->
+  <section>
+    <div class="section-label">Who I Work With</div>
+    <h2>Built for Home Service Businesses</h2>
+    <p class="section-sub">I specialize in one type of business. That means when I look at your marketing, I already know what's broken — and how to fix it fast.</p>
+    <div class="niche-grid">
+      <div class="niche-card">
+        <div class="icon">🔧</div>
+        <h3>Plumbers</h3>
+        <p>Stop relying on word-of-mouth. Get consistent inbound calls year-round.</p>
+      </div>
+      <div class="niche-card">
+        <div class="icon">🏗️</div>
+        <h3>Contractors & Builders</h3>
+        <p>Fill your pipeline with qualified estimates — not tire kickers from job boards.</p>
+      </div>
+      <div class="niche-card">
+        <div class="icon">🏠</div>
+        <h3>Roofers & HVAC</h3>
+        <p>Break the seasonality trap. Leads that come in whether it's peak season or not.</p>
+      </div>
+    </div>
+  </section>
+  <hr class="divider" />
+
+  <!-- PROCESS -->
+  <section>
+    <div class="section-label">How It Works</div>
+    <h2>Three Steps. No Guesswork.</h2>
+    <p class="section-sub">Every engagement starts with proof — not promises.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Discovery Call (30 min)</h3>
+          <p>We look at your current online presence together. I'll show you exactly where you're losing leads before we talk about anything else.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Foundation Fix (30 Days)</h3>
+          <p>I take your online presence score to 100% — listings, reviews, citations, everything. If I don't hit 100% in 30 days, you get your deposit back. No questions.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Ads on Top</h3>
+          <p>Once your foundation is solid, we run Facebook and Instagram ads that actually convert. Most businesses skip step 2 — that's why their ads fail.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="divider" />
+
+  <!-- MECHANISM -->
+  <section>
+    <div class="section-label">The Approach</div>
+    <h2>We Show You the Problem Before We Sell You Anything</h2>
+    <p class="section-sub">98% of agencies pitch you. We show up with your data.</p>
+    <div class="mechanism-box">
+      <h3>The Audit-First System</h3>
+      <p>Before any pitch, I pull a full report on your business's online presence — listings accuracy, review health, citation consistency across 70+ directories. Most owners have never seen this data. It usually explains exactly why the phone isn't ringing.</p>
+      <ul class="mechanism-points">
+        <li>We identify the exact gaps costing you leads right now</li>
+        <li>We fix the foundation completely — score goes to 100%</li>
+        <li>We run ads on top of a clean, optimized presence — compounding results</li>
+        <li>You watch the whole process live through your own client portal</li>
+      </ul>
+    </div>
+  </section>
+  <hr class="divider" />
+
+  <!-- COMMITMENT -->
+  <section>
+    <div class="section-label">My Commitment</div>
+    <h2>One Client Per Area. Full Focus.</h2>
+    <div class="commitment-box">
+      <p>I only work with <strong>one home service business per niche per area</strong>. When I take you on, I'm not splitting attention across ten other plumbers in your city. Your competitors don't get access to the same system while we're working together.</p>
+      <br />
+      <p>I'm <strong>currently accepting one new client</strong> in the Utah home service market. When that spot fills, it's closed.</p>
+    </div>
+  </section>
+  <hr class="divider" />
+
+  <!-- ABOUT -->
+  <section>
+    <div class="section-label">About</div>
+    <h2>Who's Behind This</h2>
+    <div class="about-inner">
+      <div class="about-avatar">KH</div>
+      <div class="about-text">
+        <h3>Keagan Hall — Tenshi Marketing</h3>
+        <p>I'm a performance marketing specialist helping local service businesses get found online and generate consistent leads. I work with home service businesses in Utah — fixing their online presence first, then running ads on top of a solid foundation. I built this system because I was tired of seeing good businesses lose to competitors with worse work but better marketing.</p>
+      </div>
+    </div>
+  </section>
+  <hr class="divider" />
+
+  <!-- FINAL CTA -->
+  <section class="cta-section">
+    <div class="section-label">Get Started</div>
+    <h2>Ready to See What's Costing You Leads?</h2>
+    <p>Book a free 30-minute call. I'll pull your report live and show you exactly where the gaps are — whether we work together or not.</p>
+    <a class="btn-primary" href="https://calendly.com/keaganhall67/30min" target="_blank">Book a Free Strategy Call</a>
+    <p class="objection">Still not sure? That's fine. Book the call anyway. You'll walk away knowing exactly what's broken in your online presence — at zero cost.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Tenshi Marketing · Keagan Hall · Utah</p>
+  </footer>
+
+</body>
+</html>
