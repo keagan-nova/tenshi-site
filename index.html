@@ -8,7 +8,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: #0A0A0A;
+      background: #0B0F1A;
       color: #FFFFFF;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.6;
@@ -22,7 +22,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 24px 40px;
-      border-bottom: 1px solid #1a1a1a;
+      border-bottom: 1px solid #C0C9D6;
     }
     .nav-logo {
       font-size: 18px;
@@ -39,7 +39,7 @@
       font-weight: 600;
       transition: background 0.2s;
     }
-    .nav-cta:hover { background: #2563EB; }
+    .nav-cta:hover { background: #1E3A8A; }
 
     /* SECTIONS */
     section {
@@ -50,7 +50,8 @@
 
     .divider {
       border: none;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid #C0C9D6;
+      opacity: 0.15;
     }
 
     /* HERO */
@@ -60,18 +61,21 @@
       padding-bottom: 100px;
     }
     .avatar {
-      width: 96px;
-      height: 96px;
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 28px;
       border-radius: 50%;
-      background: #1a1a2e;
+      background: #fff;
       border: 2px solid #3B82F6;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 32px;
-      font-weight: 700;
-      color: #3B82F6;
-      margin: 0 auto 28px;
+      overflow: hidden;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .hero h1 {
       font-size: clamp(28px, 5vw, 48px);
@@ -82,7 +86,7 @@
     .hero h1 span { color: #3B82F6; }
     .hero p {
       font-size: 18px;
-      color: #999;
+      color: #A1A1AA;
       max-width: 560px;
       margin: 0 auto 36px;
     }
@@ -96,12 +100,12 @@
       font-weight: 700;
       transition: background 0.2s;
     }
-    .btn-primary:hover { background: #2563EB; }
+    .btn-primary:hover { background: #1E3A8A; }
     .sub-cta {
       display: block;
       margin-top: 14px;
       font-size: 13px;
-      color: #555;
+      color: #A1A1AA;
     }
 
     /* SECTION HEADERS */
@@ -120,7 +124,7 @@
       line-height: 1.25;
     }
     .section-sub {
-      color: #888;
+      color: #A1A1AA;
       font-size: 16px;
       margin-bottom: 48px;
       max-width: 600px;
@@ -134,14 +138,14 @@
       margin-top: 40px;
     }
     .niche-card {
-      background: #111;
-      border: 1px solid #1e1e1e;
+      background: #1E3A8A22;
+      border: 1px solid #1E3A8A;
       border-radius: 10px;
       padding: 28px 24px;
     }
     .niche-card .icon { font-size: 28px; margin-bottom: 12px; }
     .niche-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
-    .niche-card p { font-size: 14px; color: #777; }
+    .niche-card p { font-size: 14px; color: #A1A1AA; }
 
     /* PROCESS */
     .steps { display: flex; flex-direction: column; gap: 24px; margin-top: 40px; }
@@ -154,7 +158,7 @@
       min-width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: #0f1f3d;
+      background: #1E3A8A;
       border: 2px solid #3B82F6;
       color: #3B82F6;
       font-weight: 800;
@@ -164,12 +168,12 @@
       justify-content: center;
     }
     .step-content h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
-    .step-content p { font-size: 14px; color: #777; }
+    .step-content p { font-size: 14px; color: #A1A1AA; }
 
     /* MECHANISM */
     .mechanism-box {
-      background: #0f1a2e;
-      border: 1px solid #1e3a6e;
+      background: #1E3A8A22;
+      border: 1px solid #1E3A8A;
       border-radius: 12px;
       padding: 40px;
       margin-top: 40px;
@@ -180,13 +184,13 @@
       color: #3B82F6;
       margin-bottom: 16px;
     }
-    .mechanism-box p { color: #aaa; font-size: 15px; margin-bottom: 16px; }
+    .mechanism-box p { color: #A1A1AA; font-size: 15px; margin-bottom: 16px; }
     .mechanism-points { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .mechanism-points li {
       display: flex;
       gap: 12px;
       font-size: 15px;
-      color: #ccc;
+      color: #FFFFFF;
     }
     .mechanism-points li::before {
       content: "→";
@@ -197,14 +201,14 @@
 
     /* COMMITMENT */
     .commitment-box {
-      background: #111;
-      border: 1px solid #1e1e1e;
+      background: #1E3A8A22;
+      border: 1px solid #1E3A8A;
       border-left: 4px solid #3B82F6;
       border-radius: 8px;
       padding: 32px;
       margin-top: 40px;
     }
-    .commitment-box p { color: #aaa; font-size: 15px; line-height: 1.8; }
+    .commitment-box p { color: #A1A1AA; font-size: 15px; line-height: 1.8; }
     .commitment-box strong { color: #fff; }
 
     /* ABOUT */
@@ -215,26 +219,25 @@
       margin-top: 40px;
     }
     .about-avatar {
-      min-width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: #1a1a2e;
-      border: 2px solid #3B82F6;
+      min-width: 80px;
+      height: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
-      font-weight: 700;
-      color: #3B82F6;
+    }
+    .about-avatar img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
     }
     .about-text h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .about-text p { font-size: 15px; color: #888; line-height: 1.7; }
+    .about-text p { font-size: 15px; color: #A1A1AA; line-height: 1.7; }
 
     /* FINAL CTA */
     .cta-section {
       text-align: center;
-      background: #0f1a2e;
-      border: 1px solid #1e3a6e;
+      background: #1E3A8A22;
+      border: 1px solid #1E3A8A;
       border-radius: 16px;
       padding: 64px 40px;
       margin: 0 24px 80px;
@@ -243,11 +246,11 @@
       margin-right: auto;
     }
     .cta-section h2 { margin-bottom: 16px; }
-    .cta-section p { color: #888; font-size: 16px; max-width: 500px; margin: 0 auto 32px; }
+    .cta-section p { color: #A1A1AA; font-size: 16px; max-width: 500px; margin: 0 auto 32px; }
     .objection {
       margin-top: 20px;
       font-size: 13px;
-      color: #555;
+      color: #A1A1AA;
       max-width: 480px;
       margin-left: auto;
       margin-right: auto;
@@ -257,9 +260,11 @@
     footer {
       text-align: center;
       padding: 32px 24px;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid #C0C9D6;
+      border-top-width: 1px;
       font-size: 13px;
-      color: #444;
+      color: #A1A1AA;
+      opacity: 0.6;
     }
 
     @media (max-width: 600px) {
@@ -280,8 +285,8 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="avatar">KH</div>
-    <h1>I Help Home Service Businesses in Utah<br><span>Stop Losing Leads Online</span></h1>
+    <div class="avatar"><img src="logo.png" alt="Tenshi Marketing" /></div>
+    <h1>I Help Local Businesses in Utah<br><span>Stop Losing Leads Online</span></h1>
     <p>Most local businesses are invisible online and don't know it. I find exactly what's broken, fix it completely, and then run ads on top of a solid foundation.</p>
     <a class="btn-primary" href="https://calendly.com/keaganhall67/30min" target="_blank">Book a Free Strategy Call</a>
     <span class="sub-cta">No pitch. Just an honest look at what's costing you leads right now.</span>
@@ -291,23 +296,23 @@
   <!-- WHO I WORK WITH -->
   <section>
     <div class="section-label">Who I Work With</div>
-    <h2>Built for Home Service Businesses</h2>
-    <p class="section-sub">I specialize in one type of business. That means when I look at your marketing, I already know what's broken — and how to fix it fast.</p>
+    <h2>Built for Local Utah Businesses</h2>
+    <p class="section-sub">If you rely on local customers, this system works for you. When I look at your marketing, I already know what's broken — and how to fix it fast.</p>
     <div class="niche-grid">
       <div class="niche-card">
-        <div class="icon">🔧</div>
-        <h3>Plumbers</h3>
-        <p>Stop relying on word-of-mouth. Get consistent inbound calls year-round.</p>
-      </div>
-      <div class="niche-card">
-        <div class="icon">🏗️</div>
-        <h3>Contractors & Builders</h3>
-        <p>Fill your pipeline with qualified estimates — not tire kickers from job boards.</p>
-      </div>
-      <div class="niche-card">
         <div class="icon">🏠</div>
-        <h3>Roofers & HVAC</h3>
-        <p>Break the seasonality trap. Leads that come in whether it's peak season or not.</p>
+        <h3>Home Services</h3>
+        <p>Plumbers, roofers, HVAC, contractors, epoxy flooring — get consistent inbound calls year-round.</p>
+      </div>
+      <div class="niche-card">
+        <div class="icon">🦷</div>
+        <h3>Medical & Dental</h3>
+        <p>Patients are searching. Make sure they're finding you first, not your competitor down the street.</p>
+      </div>
+      <div class="niche-card">
+        <div class="icon">✂️</div>
+        <h3>Salons, Spas & Detail Shops</h3>
+        <p>Stop relying on regulars. Build a steady stream of new customers every month.</p>
       </div>
     </div>
   </section>
@@ -323,7 +328,7 @@
         <div class="step-num">1</div>
         <div class="step-content">
           <h3>Discovery Call (30 min)</h3>
-          <p>We look at your current online presence together. I'll show you exactly where you're losing leads before we talk about anything else.</p>
+          <p>I look at your current online presence with you. I'll show you exactly where you're losing leads before I talk about anything else.</p>
         </div>
       </div>
       <div class="step">
@@ -337,7 +342,7 @@
         <div class="step-num">3</div>
         <div class="step-content">
           <h3>Ads on Top</h3>
-          <p>Once your foundation is solid, we run Facebook and Instagram ads that actually convert. Most businesses skip step 2 — that's why their ads fail.</p>
+          <p>Once your foundation is solid, I run Facebook and Instagram ads that actually convert. Most businesses skip step 2 — that's why their ads fail.</p>
         </div>
       </div>
     </div>
@@ -347,15 +352,15 @@
   <!-- MECHANISM -->
   <section>
     <div class="section-label">The Approach</div>
-    <h2>We Show You the Problem Before We Sell You Anything</h2>
-    <p class="section-sub">98% of agencies pitch you. We show up with your data.</p>
+    <h2>I Show You the Problem Before I Sell You Anything</h2>
+    <p class="section-sub">98% of agencies pitch you. I show up with your data.</p>
     <div class="mechanism-box">
       <h3>The Audit-First System</h3>
       <p>Before any pitch, I pull a full report on your business's online presence — listings accuracy, review health, citation consistency across 70+ directories. Most owners have never seen this data. It usually explains exactly why the phone isn't ringing.</p>
       <ul class="mechanism-points">
-        <li>We identify the exact gaps costing you leads right now</li>
-        <li>We fix the foundation completely — score goes to 100%</li>
-        <li>We run ads on top of a clean, optimized presence — compounding results</li>
+        <li>I identify the exact gaps costing you leads right now</li>
+        <li>I fix the foundation completely — score goes to 100%</li>
+        <li>I run ads on top of a clean, optimized presence — compounding results</li>
         <li>You watch the whole process live through your own client portal</li>
       </ul>
     </div>
@@ -365,11 +370,11 @@
   <!-- COMMITMENT -->
   <section>
     <div class="section-label">My Commitment</div>
-    <h2>One Client Per Area. Full Focus.</h2>
+    <h2>One Per Niche. Full Focus.</h2>
     <div class="commitment-box">
-      <p>I only work with <strong>one home service business per niche per area</strong>. When I take you on, I'm not splitting attention across ten other plumbers in your city. Your competitors don't get access to the same system while we're working together.</p>
+      <p>When I take on ad clients, I only work with <strong>one business per niche per area</strong>. If I'm running ads for a roofer in Provo, no other Provo roofer gets access to the same system while we're working together. Your competitors don't get in.</p>
       <br />
-      <p>I'm <strong>currently accepting one new client</strong> in the Utah home service market. When that spot fills, it's closed.</p>
+      <p>The foundation fix is different — I can help multiple businesses get their online presence cleaned up at the same time. But when it comes to ads, <strong>I'm currently accepting one new client per niche</strong> in the Utah market. When that spot fills, it's closed.</p>
     </div>
   </section>
   <hr class="divider" />
@@ -379,10 +384,10 @@
     <div class="section-label">About</div>
     <h2>Who's Behind This</h2>
     <div class="about-inner">
-      <div class="about-avatar">KH</div>
+      <div class="about-avatar"><img src="logo.png" alt="Tenshi Marketing" /></div>
       <div class="about-text">
         <h3>Keagan Hall — Tenshi Marketing</h3>
-        <p>I'm a performance marketing specialist helping local service businesses get found online and generate consistent leads. I work with home service businesses in Utah — fixing their online presence first, then running ads on top of a solid foundation. I built this system because I was tired of seeing good businesses lose to competitors with worse work but better marketing.</p>
+        <p>I'm a performance marketing specialist helping local businesses in Utah get found online and generate consistent leads. I fix their online presence first, then run ads on top of a solid foundation. I built this system because I was tired of seeing good businesses lose to competitors with worse work but better marketing.</p>
       </div>
     </div>
   </section>
