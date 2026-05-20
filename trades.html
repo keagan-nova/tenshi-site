@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>See What's Costing You Calls — Tenshi Marketing</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0B0F1A;
+      color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-logo { font-size: 18px; font-weight: 700; letter-spacing: 0.05em; color: #3B82F6; }
+    .nav-cta {
+      background: #3B82F6;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: #2563EB; }
+
+    .hero {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 90px 24px 60px;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(59,130,246,0.12);
+      color: #3B82F6;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(59,130,246,0.25);
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 span { color: #3B82F6; }
+    .hero p {
+      font-size: 18px;
+      color: #94A3B8;
+      max-width: 560px;
+      margin: 0 auto 36px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #3B82F6;
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.1s;
+      margin-bottom: 12px;
+    }
+    .cta-btn:hover { background: #2563EB; transform: translateY(-1px); }
+    .cta-sub { font-size: 13px; color: #64748B; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .section { max-width: 860px; margin: 0 auto; padding: 70px 24px; }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3B82F6;
+      margin-bottom: 16px;
+    }
+    .section h2 {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 800;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .section p { color: #94A3B8; font-size: 16px; max-width: 620px; margin-bottom: 16px; }
+
+    .leak-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 36px;
+    }
+    .leak-card {
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 24px;
+    }
+    .leak-card .icon {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .leak-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .leak-card p { font-size: 13px; color: #64748B; margin: 0; }
+
+    .how-list { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+    .how-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      padding: 20px 24px;
+    }
+    .how-num {
+      background: #3B82F6;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .how-list h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .how-list p { font-size: 13px; color: #64748B; margin: 0; }
+
+    .cta-section {
+      text-align: center;
+      padding: 80px 24px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .cta-section h2 { font-size: clamp(26px, 4vw, 40px); font-weight: 800; margin-bottom: 16px; letter-spacing: -0.01em; }
+    .cta-section p { color: #94A3B8; font-size: 16px; margin-bottom: 32px; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      color: #334155;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Tenshi Marketing</div>
+    <a href="https://calendly.com/keaganhall67/30min" target="_blank" class="nav-cta">Get My Free Breakdown</a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-tag">For Trades &amp; Service Businesses</div>
+    <h1>Fix the Leaks Before<br><span>Buying More Leads</span></h1>
+    <p>Most local service businesses aren't losing jobs because of bad work. They're losing them because leads hit their online presence and disappear.</p>
+    <a href="https://calendly.com/keaganhall67/30min" target="_blank" class="cta-btn">See What's Costing You Calls</a>
+    <div class="cta-sub">Free 15-minute breakdown — no pitch, just answers</div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="section">
+    <div class="section-label">The Problem</div>
+    <h2>You're losing calls you don't even know about</h2>
+    <p>Someone searches for your service, finds your business, and then something puts them off — a missing review, a slow website, a form that doesn't work. They call your competitor instead.</p>
+    <p>This happens every day. You just don't see it.</p>
+
+    <div class="leak-grid">
+      <div class="leak-card">
+        <div class="icon">📍</div>
+        <h3>Google Business Profile gaps</h3>
+        <p>Incomplete profiles rank lower and convert worse. Most businesses don't know what's missing.</p>
+      </div>
+      <div class="leak-card">
+        <div class="icon">⭐</div>
+        <h3>Not enough reviews</h3>
+        <p>Customers compare before they call. If your competitors have more reviews, you lose before the phone rings.</p>
+      </div>
+      <div class="leak-card">
+        <div class="icon">📞</div>
+        <h3>Missed calls &amp; slow follow-up</h3>
+        <p>A lead that doesn't get called back within 5 minutes is 80% less likely to convert. Most businesses have no system.</p>
+      </div>
+      <div class="leak-card">
+        <div class="icon">🌐</div>
+        <h3>Website that doesn't convert</h3>
+        <p>If your site doesn't load fast, look credible, or make it easy to request a quote — you're losing people who were ready to buy.</p>
+      </div>
+      <div class="leak-card">
+        <div class="icon">📋</div>
+        <h3>Local listings out of sync</h3>
+        <p>Wrong address or phone number across directories kills your local SEO and sends leads somewhere else.</p>
+      </div>
+      <div class="leak-card">
+        <div class="icon">📣</div>
+        <h3>Running ads on a broken funnel</h3>
+        <p>Paid traffic to a weak foundation is money down the drain. Foundation first — then ads.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="section">
+    <div class="section-label">How It Works</div>
+    <h2>We fix the foundation first.<br>Then we scale.</h2>
+    <p>Most agencies want to run ads immediately. We don't. We look at what's actually costing you calls before spending a dollar on traffic.</p>
+
+    <ul class="how-list">
+      <li>
+        <div class="how-num">1</div>
+        <div>
+          <h3>Free Online Presence Breakdown</h3>
+          <p>We pull a full audit of your online presence — Google profile, reviews, website, listings, and more. You'll see exactly where leads are falling off.</p>
+        </div>
+      </li>
+      <li>
+        <div class="how-num">2</div>
+        <div>
+          <h3>Fix What's Broken</h3>
+          <p>We clean up the foundation — listings, profile, review flow, website trust signals. The stuff that makes people actually call instead of bounce.</p>
+        </div>
+      </li>
+      <li>
+        <div class="how-num">3</div>
+        <div>
+          <h3>Add Paid Traffic (When Ready)</h3>
+          <p>Once the foundation converts, we add Meta ads to pour consistent leads into a system that's actually built to handle them.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="cta-section">
+    <h2>Ready to see what's costing you calls?</h2>
+    <p>It's a free 15-minute call. No pitch. We'll walk through your online presence and show you exactly what's holding you back.</p>
+    <a href="https://calendly.com/keaganhall67/30min" target="_blank" class="cta-btn">Book Your Free Breakdown</a>
+    <div class="cta-sub" style="margin-top:10px">Spots are limited — local Utah businesses only</div>
+  </div>
+
+  <footer>
+    &copy; 2026 Tenshi Marketing · Utah
+  </footer>
+
+</body>
+</html>
