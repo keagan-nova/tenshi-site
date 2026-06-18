@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study Opportunity — Tenshi Marketing</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0B0F1A; color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .nav-logo { font-size: 18px; font-weight: 700; letter-spacing: 0.05em; color: #10B981; }
+    .nav-cta { background: #10B981; color: #fff; padding: 10px 22px; border-radius: 6px; font-size: 14px; font-weight: 600; transition: background 0.2s; cursor: pointer; border: none; }
+    .nav-cta:hover { background: #059669; }
+    .hero { max-width: 680px; margin: 0 auto; padding: 80px 24px 40px; text-align: center; }
+    .hero-tag { display: inline-block; background: rgba(16,185,129,0.12); color: #10B981; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 28px; border: 1px solid rgba(16,185,129,0.25); }
+    .hero h1 { font-size: clamp(28px, 4.5vw, 48px); font-weight: 800; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.02em; }
+    .hero h1 span { color: #10B981; }
+    .hero p { font-size: 17px; color: #94A3B8; max-width: 520px; margin: 0 auto; }
+    .what-you-get { max-width: 620px; margin: 40px auto 0; padding: 0 24px; }
+    .what-you-get h3 { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #10B981; margin-bottom: 16px; }
+    .perks { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .perks li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: #CBD5E1; }
+    .perks li::before { content: "✓"; color: #10B981; font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+    .form-section { max-width: 520px; margin: 48px auto 0; padding: 0 24px 80px; }
+    .form-section h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 800; margin-bottom: 8px; text-align: center; }
+    .form-section p { font-size: 15px; color: #94A3B8; text-align: center; margin-bottom: 28px; }
+    .spots { display: inline-block; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); color: #10B981; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 24px; display: block; text-align: center; }
+    .form-wrap { background: #111827; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 32px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: #94A3B8; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .form-group input { width: 100%; background: #0B0F1A; border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 16px; font-size: 15px; color: #fff; outline: none; transition: border 0.2s; }
+    .form-group input:focus { border-color: #10B981; }
+    .form-group input::placeholder { color: #475569; }
+    .submit-btn { width: 100%; background: #10B981; color: #fff; border: none; border-radius: 8px; padding: 14px; font-size: 16px; font-weight: 700; cursor: pointer; transition: background 0.2s, transform 0.1s; margin-top: 8px; }
+    .submit-btn:hover { background: #059669; transform: translateY(-1px); }
+    .submit-btn:disabled { background: #334155; cursor: not-allowed; transform: none; }
+    .hear-from { font-size: 13px; color: #475569; text-align: center; margin-top: 12px; }
+    .success-msg { display: none; text-align: center; padding: 32px; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.3); border-radius: 14px; }
+    .success-msg h3 { font-size: 20px; font-weight: 800; color: #10B981; margin-bottom: 8px; }
+    .success-msg p { font-size: 15px; color: #94A3B8; }
+    footer { text-align: center; padding: 32px 24px; font-size: 13px; color: #334155; border-top: 1px solid rgba(255,255,255,0.05); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Tenshi Marketing</div>
+    <button class="nav-cta" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Claim Your Spot</button>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-tag">For Dental Practices &amp; Medical Clinics</div>
+    <h1>We're Taking On <span>3 Case Studies</span> This Month</h1>
+    <p>We're offering a reduced rate to a handful of practices while we build out our case study library. You get the full service — we get the results to show.</p>
+  </div>
+
+  <div class="what-you-get">
+    <h3>What's Included</h3>
+    <ul class="perks">
+      <li>Full online presence fix — listings, Google profile, reviews, trust signals</li>
+      <li>Meta ads setup and management to bring in new patients</li>
+      <li>Weekly reporting so you can see exactly what's working</li>
+      <li>Reduced rate in exchange for a testimonial when we get results</li>
+    </ul>
+  </div>
+
+  <div class="form-section" id="form-section">
+    <h2>Claim Your Spot</h2>
+    <p>We'll reach out within 24 hours to see if it's a fit.</p>
+    <div class="spots">3 spots remaining this month</div>
+
+    <div class="form-wrap" id="form-wrap">
+      <form id="contact-form">
+        <input type="hidden" name="source" value="Case Study Landing Page - Medical" />
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" name="name" placeholder="Sarah" required />
+        </div>
+        <div class="form-group">
+          <label>Practice Name</label>
+          <input type="text" name="business" placeholder="Bright Smile Dental" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="(801) 555-0123" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="sarah@brightsmile.com" required />
+        </div>
+        <button type="submit" class="submit-btn" id="submit-btn">Claim Your Spot</button>
+        <div class="hear-from">You'll hear from us within 24 hours.</div>
+      </form>
+    </div>
+
+    <div class="success-msg" id="success-msg">
+      <h3>You're in.</h3>
+      <p>We'll reach out within 24 hours to confirm your spot and get things moving.</p>
+    </div>
+  </div>
+
+  <footer>&copy; 2026 Tenshi Marketing</footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      const data = new FormData(this);
+      try {
+        const res = await fetch('https://formspree.io/f/xdajzrdr', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+        if (res.ok) {
+          document.getElementById('form-wrap').style.display = 'none';
+          document.getElementById('success-msg').style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Claim Your Spot';
+          alert('Something went wrong. Please try again.');
+        }
+      } catch(err) {
+        btn.disabled = false;
+        btn.textContent = 'Claim Your Spot';
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  </script>
+
+</body>
+</html>
