@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tenshi Marketing — Working Together</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0B0F1A;
+      color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 64px 24px 40px;
+    }
+    .logo-mark {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #3B82F6;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    header p {
+      color: #A1A1AA;
+      font-size: 16px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* TIERS */
+    .tiers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 40px auto 0;
+      padding: 0 24px;
+      align-items: stretch;
+    }
+    .tier {
+      background: #1E3A8A22;
+      border: 1px solid #1E3A8A;
+      border-radius: 14px;
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+    }
+    .tier.featured {
+      border-color: #3B82F6;
+      box-shadow: 0 0 40px #3B82F633;
+      position: relative;
+    }
+    .featured-tag {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #3B82F6;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .tier-name {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3B82F6;
+      margin-bottom: 10px;
+    }
+    .tier-price {
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .tier-price span {
+      font-size: 15px;
+      font-weight: 600;
+      color: #A1A1AA;
+    }
+    .tier-setup {
+      font-size: 13px;
+      color: #A1A1AA;
+      margin-top: 6px;
+      margin-bottom: 22px;
+    }
+    .tier-tagline {
+      font-size: 14px;
+      color: #FFFFFF;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #1E3A8A;
+    }
+    .tier-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+    }
+    .tier-list li {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+      color: #E4E4E7;
+    }
+    .tier-list li::before {
+      content: "→";
+      color: #3B82F6;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .tier-list li.inherit {
+      color: #A1A1AA;
+      font-style: italic;
+    }
+    .tier-list li.inherit::before { content: "＋"; }
+
+    /* AD SPEND NOTE */
+    .spend-note {
+      text-align: center;
+      max-width: 640px;
+      margin: 32px auto 0;
+      padding: 0 24px;
+      font-size: 13px;
+      color: #A1A1AA;
+    }
+
+    /* FOUNDATION FIX */
+    .foundation {
+      max-width: 720px;
+      margin: 56px auto 0;
+      padding: 0 24px;
+    }
+    .foundation-box {
+      background: #1E3A8A22;
+      border: 1px dashed #1E3A8A;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+    }
+    .foundation-box .tier-name { margin-bottom: 6px; }
+    .foundation-box h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .foundation-box .price {
+      font-size: 26px;
+      font-weight: 800;
+      color: #3B82F6;
+      margin-bottom: 14px;
+    }
+    .foundation-box p {
+      font-size: 14px;
+      color: #A1A1AA;
+      max-width: 520px;
+      margin: 0 auto 10px;
+    }
+    .foundation-box .credit {
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* GUARANTEE / COMMITMENT STRIP */
+    .strip {
+      max-width: 720px;
+      margin: 48px auto 0;
+      padding: 0 24px;
+    }
+    .strip-box {
+      border-left: 4px solid #3B82F6;
+      background: #1E3A8A22;
+      border-radius: 8px;
+      padding: 24px 28px;
+    }
+    .strip-box p {
+      font-size: 14px;
+      color: #A1A1AA;
+      line-height: 1.8;
+    }
+    .strip-box strong { color: #fff; }
+
+    @media (max-width: 600px) {
+      header { padding: 40px 20px 24px; }
+      .tier { padding: 28px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-mark">TENSHI MARKETING</div>
+    <h1>Working Together</h1>
+    <p>Three ways to do this. Every tier is month to month — no long contracts. You stay because it's working, not because you're locked in.</p>
+  </header>
+
+  <div class="tiers">
+
+    <!-- TIER 1 -->
+    <div class="tier">
+      <div class="tier-name">Ads Engine</div>
+      <div class="tier-price">$1,000<span>/mo</span></div>
+      <div class="tier-setup">+ $500 one-time setup · + your ad spend</div>
+      <div class="tier-tagline">The core system. Ads that bring you jobs.</div>
+      <ul class="tier-list">
+        <li>Facebook & Instagram campaigns built and managed</li>
+        <li>Multiple ads tested against each other from week one</li>
+        <li>Losers cut fast, winners scaled — clear kill rules</li>
+        <li>Tracking installed so every lead is counted</li>
+        <li>Weekly report: cost per lead, what's running, what changed</li>
+        <li>Exclusivity — your niche, your area, no competitors</li>
+      </ul>
+    </div>
+
+    <!-- TIER 2 -->
+    <div class="tier featured">
+      <div class="featured-tag">Most Popular</div>
+      <div class="tier-name">Ads + Presence</div>
+      <div class="tier-price">$1,500<span>/mo</span></div>
+      <div class="tier-setup">+ $500 one-time setup · + your ad spend</div>
+      <div class="tier-tagline">The ads bring them in. This makes sure they don't leak out.</div>
+      <ul class="tier-list">
+        <li class="inherit">Everything in Ads Engine</li>
+        <li>Google Business Profile managed & posted to</li>
+        <li>Review responses handled — every review, every time</li>
+        <li>Listings kept accurate across directories</li>
+        <li>Landing page maintained & improved as data comes in</li>
+      </ul>
+    </div>
+
+    <!-- TIER 3 -->
+    <div class="tier">
+      <div class="tier-name">Full System</div>
+      <div class="tier-price">$2,500<span>/mo</span></div>
+      <div class="tier-setup">+ $500 one-time setup · + your ad spend</div>
+      <div class="tier-tagline">You never touch a lead until it's booked.</div>
+      <ul class="tier-list">
+        <li class="inherit">Everything in Ads + Presence</li>
+        <li>Instant follow-up — every lead gets a text within 60 seconds</li>
+        <li>Missed-call text-back — no lead dies in voicemail</li>
+        <li>Automated follow-up sequences until they book or say no</li>
+        <li>Pipeline dashboard — every lead tracked from click to closed job</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p class="spend-note">Ad spend is paid directly to Meta — it's your budget, in your account, fully visible to you. Most clients start between $1,000–$2,000/mo in spend.</p>
+
+  <!-- FOUNDATION FIX -->
+  <div class="foundation">
+    <div class="foundation-box">
+      <div class="tier-name">Not Ready for Ads Yet?</div>
+      <h3>Foundation Fix</h3>
+      <div class="price">$500 one-time</div>
+      <p>Listings cleaned up, Google Business Profile optimized, review system set up, tracking installed. The stuff that quietly leaks leads — fixed in 30 days, so when you're ready for ads, they actually work.</p>
+      <p class="credit">Start ads within 90 days and the $500 counts as your setup fee.</p>
+    </div>
+  </div>
+
+  <!-- COMMITMENT STRIP -->
+  <div class="strip">
+    <div class="strip-box">
+      <p><strong>One business per niche per area.</strong> If I'm running ads for you, your competitors can't hire me. That's the deal for as long as we work together — which is also why I'm selective about who I take on.</p>
+    </div>
+  </div>
+
+</body>
+</html>
