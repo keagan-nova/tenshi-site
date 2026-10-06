@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eryx — Zurich (clean / editorial light)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--paper:#F6F5F1;--ink:#15161B;--mut:#6B6C74;--blue:#1E3A8A;--red:#D8402E;--line:#E2E0D8}
+  body{background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .serif{font-family:"Hoefler Text",Georgia,"Times New Roman",serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 40px}
+
+  nav{display:flex;justify-content:space-between;align-items:center;max-width:1160px;margin:0 auto;padding:26px 40px;border-bottom:1px solid var(--ink)}
+  .logo{font-weight:700;font-size:18px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+  .mono{width:28px;height:28px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;border-radius:4px}
+  .ncta{font-size:14px;font-weight:600;border-bottom:2px solid var(--red);padding-bottom:3px}
+
+  .hero{display:grid;grid-template-columns:1.3fr .9fr;gap:60px;padding:90px 0 70px;align-items:end;border-bottom:1px solid var(--ink)}
+  .ey{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:26px}
+  .hero h1{font-weight:400;font-size:clamp(40px,5.6vw,72px);line-height:1.04;letter-spacing:-.02em}
+  .hero h1 u{text-decoration:none;background:linear-gradient(transparent 62%,#d8402e33 62%);padding:0 2px}
+  .hero .lead{color:var(--mut);font-size:18px;max-width:40ch;margin-bottom:26px}
+  .cta{display:inline-block;background:var(--ink);color:var(--paper);font-weight:600;padding:16px 30px;border-radius:4px;font-size:15px;transition:.2s}
+  .cta:hover{background:var(--blue)}
+  .under{font-size:13px;color:var(--mut);margin-top:14px}
+
+  /* metric panel */
+  .metrics{border:1px solid var(--line);background:#fff;border-radius:8px;overflow:hidden}
+  .mhead{padding:14px 18px;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);display:flex;justify-content:space-between}
+  .mrow{padding:18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline}
+  .mrow:last-child{border-bottom:none}
+  .mrow .k{font-size:14px;color:var(--mut)}
+  .mrow .v{font-family:"Hoefler Text",Georgia,serif;font-size:28px;font-weight:600}
+  .mrow .v.blue{color:var(--blue)}
+  .mnote{font-size:11px;color:var(--mut);padding:10px 18px;font-style:italic}
+
+  .sec{padding:80px 0;border-bottom:1px solid var(--ink)}
+  .lbl{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+  .sec h2{font-weight:400;font-size:clamp(26px,3.6vw,42px);letter-spacing:-.01em;margin-bottom:46px;max-width:20ch}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .g{background:var(--paper);padding:30px 26px}
+  .g .n{font-family:"Hoefler Text",Georgia,serif;font-size:15px;color:var(--blue);margin-bottom:14px}
+  .g h3{font-size:18px;font-weight:600;margin-bottom:8px}
+  .g p{color:var(--mut);font-size:14px}
+
+  .final{text-align:center;padding:90px 40px}
+  .final h2{font-weight:400;font-size:clamp(28px,4.5vw,48px);letter-spacing:-.02em;margin-bottom:22px;max-width:18ch;margin-left:auto;margin-right:auto}
+  footer{border-top:1px solid var(--ink);padding:30px 40px;display:flex;justify-content:space-between;max-width:1160px;margin:0 auto;font-size:13px;color:var(--mut);flex-wrap:wrap;gap:12px}
+
+  @media(max-width:760px){.hero{grid-template-columns:1fr;gap:40px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><span class="mono">T</span>Eryx Labs</div>
+    <a class="ncta" href="#">Book a Free Call</a>
+  </nav>
+
+  <div class="wrap hero">
+    <div>
+      <div class="ey">Paid Social for Local Service Businesses</div>
+      <h1 class="serif">Ads that bring you <u>consistent jobs</u> — not just clicks.</h1>
+      <p class="lead" style="margin-top:24px">Referrals slow down. A tested ad system doesn't. Predictable, measurable jobs — month after month.</p>
+      <a class="cta" href="#">Book a Free Strategy Call</a>
+      <div class="under">No pitch. A straight read on what ads could do for you.</div>
+    </div>
+    <div class="metrics">
+      <div class="mhead"><span>What we actually track</span><span>Per client</span></div>
+      <div class="mrow"><span class="k">Cost per lead</span><span class="v blue">↓ weekly</span></div>
+      <div class="mrow"><span class="k">Return on ad spend</span><span class="v">ROAS</span></div>
+      <div class="mrow"><span class="k">Jobs booked</span><span class="v blue">the only one<br>that pays</span></div>
+      <div class="mnote">Illustrative — the metrics we report, not client figures.</div>
+    </div>
+  </div>
+
+  <div class="wrap sec">
+    <div class="lbl">Who We Work With</div>
+    <h2 class="serif">We don't work with everyone — only where ads reliably print jobs.</h2>
+    <div class="grid">
+      <div class="g"><div class="n">01</div><h3>Home Services &amp; Trades</h3><p>Roofers, plumbers, HVAC, landscapers, contractors — consistent inbound, year-round.</p></div>
+      <div class="g"><div class="n">02</div><h3>Medical &amp; Dental</h3><p>Patients are already searching. Ads make sure they book with you.</p></div>
+      <div class="g"><div class="n">03</div><h3>Salons, Spas &amp; Detail</h3><p>New customers every month — stop relying on regulars.</p></div>
+    </div>
+  </div>
+
+  <div class="final">
+    <h2 class="serif">Want jobs coming in while you're on the job?</h2>
+    <a class="cta" href="#">Book a Free Strategy Call</a>
+  </div>
+
+  <footer>
+    <span>© 2026 Eryx Labs</span>
+    <span>Keagan Hall · Media Buyer</span>
+  </footer>
+</body>
+</html>

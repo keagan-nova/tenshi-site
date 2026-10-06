@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tenshi Marketing — Working Together</title>
+  <title>Eryx Labs — Working Together</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -203,6 +203,50 @@
     }
     .strip-box strong { color: #fff; }
 
+    /* ADD-ONS */
+    .addons-head {
+      text-align: center;
+      max-width: 640px;
+      margin: 64px auto 0;
+      padding: 0 24px;
+    }
+    .addons-head h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .addons-head p { color: #A1A1AA; font-size: 14px; max-width: 520px; margin: 0 auto; }
+    .addons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      max-width: 1100px;
+      margin: 28px auto 0;
+      padding: 0 24px;
+      align-items: stretch;
+    }
+    .addon {
+      background: #1E3A8A22;
+      border: 1px dashed #1E3A8A;
+      border-radius: 12px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .addon h3 { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+    .addon-price { font-size: 28px; font-weight: 800; color: #3B82F6; line-height: 1; }
+    .addon-price span { font-size: 14px; font-weight: 600; color: #A1A1AA; }
+    .addon-tagline {
+      font-size: 13px; color: #FFFFFF; font-weight: 600;
+      margin: 12px 0 16px; padding-bottom: 16px; border-bottom: 1px solid #1E3A8A;
+    }
+    .addon ul { list-style: none; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+    .addon ul li { display: flex; gap: 10px; font-size: 13px; color: #E4E4E7; }
+    .addon ul li::before { content: "→"; color: #3B82F6; font-weight: 700; flex-shrink: 0; }
+    .addon ul li.inherit { color: #A1A1AA; font-style: italic; }
+    .addon ul li.inherit::before { content: "＋"; }
+    .addon-note { margin-top: 16px; font-size: 13px; color: #FFFFFF; font-weight: 600; }
+
     @media (max-width: 600px) {
       header { padding: 40px 20px 24px; }
       .tier { padding: 28px 22px; }
@@ -212,7 +256,7 @@
 <body>
 
   <header>
-    <div class="logo-mark">TENSHI MARKETING</div>
+    <div class="logo-mark">ERYX LABS</div>
     <h1>Working Together</h1>
     <p>Three ways to do this. Every tier is month to month — no long contracts. You stay because it's working, not because you're locked in.</p>
   </header>
@@ -238,16 +282,16 @@
     <!-- TIER 2 -->
     <div class="tier featured">
       <div class="featured-tag">Most Popular</div>
-      <div class="tier-name">Ads + Presence</div>
+      <div class="tier-name">Ads + Appearance</div>
       <div class="tier-price">$1,500<span>/mo</span></div>
       <div class="tier-setup">+ $500 one-time setup · + your ad spend</div>
-      <div class="tier-tagline">The ads bring them in. This makes sure they don't leak out.</div>
+      <div class="tier-tagline">We bring the lead in — then make sure you know exactly when to act.</div>
       <ul class="tier-list">
         <li class="inherit">Everything in Ads Engine</li>
-        <li>Google Business Profile managed & posted to</li>
+        <li>Google Business Profile managed & posted to regularly</li>
         <li>Review responses handled — every review, every time</li>
-        <li>Listings kept accurate across directories</li>
-        <li>Landing page maintained & improved as data comes in</li>
+        <li>Lead-response alerts the moment a new lead comes in</li>
+        <li>"Call this one now" priority flags on your hottest leads</li>
       </ul>
     </div>
 
@@ -256,13 +300,16 @@
       <div class="tier-name">Full System</div>
       <div class="tier-price">$2,500<span>/mo</span></div>
       <div class="tier-setup">+ $500 one-time setup · + your ad spend</div>
-      <div class="tier-tagline">You never touch a lead until it's booked.</div>
+      <div class="tier-tagline">You never touch a lead until it's qualified and booked.</div>
       <ul class="tier-list">
-        <li class="inherit">Everything in Ads + Presence</li>
-        <li>Instant follow-up — every lead gets a text within 60 seconds</li>
-        <li>Missed-call text-back — no lead dies in voicemail</li>
-        <li>Automated follow-up sequences until they book or say no</li>
-        <li>Pipeline dashboard — every lead tracked from click to closed job</li>
+        <li class="inherit">Everything in Ads + Appearance</li>
+        <li>AI lead qualifier — engages every lead within seconds</li>
+        <li>Qualifying questions asked automatically, leads scored & prioritized</li>
+        <li>Appointment booking straight into your calendar</li>
+        <li>Automated follow-up until they book or say no</li>
+        <li>Missed-lead recovery — no lead slips through the cracks</li>
+        <li>CRM pipeline — every lead tracked from click to closed job</li>
+        <li>Website included if needed</li>
       </ul>
     </div>
 
@@ -270,15 +317,54 @@
 
   <p class="spend-note">Ad spend is paid directly to Meta — it's your budget, in your account, fully visible to you. Most clients start between $1,000–$2,000/mo in spend.</p>
 
-  <!-- FOUNDATION FIX -->
-  <div class="foundation">
-    <div class="foundation-box">
-      <div class="tier-name">Not Ready for Ads Yet?</div>
-      <h3>Foundation Fix</h3>
-      <div class="price">$500 one-time</div>
-      <p>Listings cleaned up, Google Business Profile optimized, review system set up, tracking installed. The stuff that quietly leaks leads — fixed in 30 days, so when you're ready for ads, they actually work.</p>
-      <p class="credit">Start ads within 90 days and the $500 counts as your setup fee.</p>
+  <!-- ADD-ONS -->
+  <div class="addons-head">
+    <div class="tier-name">Add-Ons</div>
+    <h2>Bolt these onto any plan</h2>
+    <p>Stack only what you need. On Ads Engine and want the qualifier? Add it — no jumping to Full System.</p>
+  </div>
+  <div class="addons">
+
+    <!-- WEBSITE -->
+    <div class="addon">
+      <div class="tier-name">Website</div>
+      <div class="addon-price">$500<span> one-time</span></div>
+      <div class="addon-tagline">Look legit online — yours to keep, no monthly.</div>
+      <ul>
+        <li>Custom build for your business — not a cookie-cutter template</li>
+        <li>Designed to turn visitors into calls</li>
+        <li>Yours to keep, no ongoing fee</li>
+      </ul>
+      <p class="addon-note">Start ads within 90 days and the $500 counts as your setup fee.</p>
     </div>
+
+    <!-- AI QUALIFIER — BASE -->
+    <div class="addon">
+      <div class="tier-name">AI Qualifier · Base</div>
+      <div class="addon-price">$350<span>/mo</span></div>
+      <div class="addon-tagline">Every lead gets answered in seconds — not hours.</div>
+      <ul>
+        <li>AI replies to every new lead instantly</li>
+        <li>Qualifying questions asked automatically</li>
+        <li>Leads scored, your hottest ones flagged to call</li>
+      </ul>
+      <p class="addon-note">No more leads going cold because you were up on a roof.</p>
+    </div>
+
+    <!-- AI QUALIFIER — FULL -->
+    <div class="addon">
+      <div class="tier-name">AI Qualifier · Full</div>
+      <div class="addon-price">$1,000<span>/mo</span></div>
+      <div class="addon-tagline">You never touch a lead until it's qualified and booked.</div>
+      <ul>
+        <li class="inherit">Everything in Base</li>
+        <li>Books appointments straight into your calendar</li>
+        <li>Follows up automatically until they book or say no</li>
+        <li>Missed-lead recovery — nothing slips through</li>
+      </ul>
+      <p class="addon-note">Saves you ~90% of the time you'd spend chasing and sorting leads.</p>
+    </div>
+
   </div>
 
   <!-- COMMITMENT STRIP -->

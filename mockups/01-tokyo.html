@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eryx — Tokyo (premium / minimal)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0B0B0F;--paper:#F3EFE7;--mut:#8C8A84;--red:#E2452F;--gold:#C9A86A;--line:#232227}
+  body{background:var(--ink);color:var(--paper);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .serif{font-family:"Hoefler Text",Georgia,"Times New Roman",serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:30px 40px;max-width:1180px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:.22em;font-size:13px;text-transform:uppercase}
+  .brand .kanji{color:var(--red);font-size:20px;letter-spacing:0}
+  .navlink{font-size:13px;color:var(--mut);letter-spacing:.08em;border:1px solid var(--line);padding:11px 22px;border-radius:2px;transition:.25s}
+  .navlink:hover{border-color:var(--gold);color:var(--paper)}
+
+  /* HERO */
+  .hero{position:relative;padding:120px 0 130px}
+  .hero .kanji-ghost{position:absolute;top:-40px;right:-10px;font-size:min(42vw,560px);line-height:.8;color:#fff;opacity:.025;pointer-events:none;user-select:none}
+  .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+  .hero h1{font-weight:400;font-size:clamp(42px,7vw,86px);line-height:1.05;letter-spacing:-.02em;max-width:14ch}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero p{margin:34px 0 44px;color:#C8C6C0;font-size:19px;max-width:48ch;font-weight:300}
+  .cta{display:inline-flex;align-items:center;gap:14px;background:var(--red);color:#fff;padding:18px 34px;border-radius:2px;font-size:15px;letter-spacing:.04em;font-weight:500;transition:.25s}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px #e2452f33}
+  .under{display:block;margin-top:18px;font-size:13px;color:var(--mut);letter-spacing:.03em}
+  .rule{height:1px;background:var(--line);margin:0 40px;max-width:1100px;margin-left:auto;margin-right:auto}
+
+  /* WING hairline */
+  .wing{display:block;margin:0 auto;width:220px;opacity:.5}
+
+  /* NICHES */
+  .sec{padding:110px 0}
+  .sectop{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
+  .sectop h2{font-weight:400;font-size:clamp(30px,4vw,46px);letter-spacing:-.02em;line-height:1.1}
+  .sectop p{color:var(--mut);max-width:40ch;font-size:15px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+  .cell{padding:40px 34px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);min-height:230px;display:flex;flex-direction:column;transition:.3s}
+  .cell:nth-child(3n){border-right:none}
+  .cell:hover{background:#121117}
+  .cell .no{font-size:12px;color:var(--gold);letter-spacing:.2em;margin-bottom:auto}
+  .cell h3{font-size:22px;font-weight:400;margin-bottom:12px}
+  .cell p{color:var(--mut);font-size:14px}
+
+  /* QUOTE / commitment */
+  .band{text-align:center;padding:120px 40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .band .kanji{color:var(--red);font-size:26px}
+  .band blockquote{font-weight:300;font-size:clamp(24px,3.4vw,40px);line-height:1.3;max-width:20ch;margin:24px auto 0;letter-spacing:-.01em}
+  .band blockquote b{color:var(--gold);font-weight:400}
+
+  footer{padding:60px 40px;display:flex;justify-content:space-between;color:var(--mut);font-size:12px;letter-spacing:.08em;max-width:1180px;margin:0 auto;flex-wrap:wrap;gap:16px}
+
+  @media(max-width:760px){.grid3{grid-template-columns:1fr}.cell{border-right:none}.cell:nth-child(3n){border-right:none}nav,.wrap,.hero{padding-left:24px;padding-right:24px}}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="brand"><span class="kanji serif">天使</span> ERYX</div>
+    <a class="navlink" href="#">Book a Call</a>
+  </nav>
+
+  <div class="wrap hero">
+    <div class="kanji-ghost serif">使</div>
+    <div class="eyebrow">Paid Social · Local Service Businesses</div>
+    <h1 class="serif">Work that keeps <em>coming</em> — whether they're talking about you or not.</h1>
+    <p>Referrals are great until they slow down. We run Facebook &amp; Instagram ads that bring local service businesses consistent, predictable jobs.</p>
+    <a class="cta" href="#">Book a Free Strategy Call →</a>
+    <span class="under">No pitch. Just a straight look at what ads could do for your business.</span>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="wrap sec">
+    <div class="sectop">
+      <h2 class="serif">Built for the few<br>we know ads print for.</h2>
+      <p>We don't work with everyone. We work with the trades and services where paid ads reliably turn into booked jobs.</p>
+    </div>
+    <div class="grid3">
+      <div class="cell"><div class="no serif">01</div><h3 class="serif">Home Services &amp; Trades</h3><p>Roofers, plumbers, HVAC, landscapers, contractors — consistent inbound, year-round.</p></div>
+      <div class="cell"><div class="no serif">02</div><h3 class="serif">Medical &amp; Dental</h3><p>Patients are already searching. Ads make sure they book with you, not the office down the street.</p></div>
+      <div class="cell"><div class="no serif">03</div><h3 class="serif">Salons, Spas &amp; Detail</h3><p>Stop relying on regulars. Fill the calendar with new customers every month.</p></div>
+    </div>
+  </div>
+
+  <div class="band">
+    <span class="kanji serif">天使</span>
+    <blockquote class="serif">One business <b>per niche, per city.</b> Your competitors don't get in.</blockquote>
+  </div>
+
+  <footer>
+    <span>© 2026 ERYX LABS</span>
+    <span>KEAGAN HALL · MEDIA BUYER</span>
+  </footer>
+</body>
+</html>

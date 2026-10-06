@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eryx — Detroit (bold / industrial)</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#0D0D0F;--fg:#FAFAFA;--mut:#8A8A90;--acc:#2F6BFF;--amber:#FFD400;--line:#262629}
+  body{background:var(--bg);color:var(--fg);font-family:"Helvetica Neue",Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .cond{font-family:"Arial Narrow","Helvetica Neue",Arial,sans-serif;text-transform:uppercase}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+
+  /* blueprint grid bg */
+  body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+  nav,main,footer{position:relative;z-index:1}
+
+  nav{display:flex;justify-content:space-between;align-items:center;max-width:1240px;margin:0 auto;padding:22px 32px;border-bottom:2px solid var(--fg)}
+  .logo{font-weight:800;letter-spacing:.02em;font-size:20px;display:flex;align-items:center;gap:10px}
+  .logo .mono{background:var(--fg);color:var(--bg);width:30px;height:30px;display:grid;place-items:center;font-size:18px;font-weight:900}
+  .ncta{background:var(--amber);color:#000;font-weight:800;padding:12px 22px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--amber);transition:.15s}
+  .ncta:hover{background:transparent;color:var(--amber)}
+
+  .hero{padding:90px 0 70px;border-bottom:2px solid var(--fg)}
+  .tag{display:inline-block;background:var(--acc);color:#fff;font-size:12px;font-weight:800;letter-spacing:.14em;padding:7px 14px;text-transform:uppercase;margin-bottom:34px}
+  .hero h1{font-weight:800;font-size:clamp(54px,11vw,150px);line-height:.9;letter-spacing:-.03em}
+  .hero h1 .out{color:transparent;-webkit-text-stroke:2px var(--fg)}
+  .hero h1 .blu{color:var(--acc)}
+  .heflex{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:40px;flex-wrap:wrap}
+  .hero p{color:var(--mut);font-size:19px;max-width:46ch;font-weight:500}
+  .bcta{background:var(--fg);color:#000;font-weight:800;font-size:16px;letter-spacing:.04em;padding:20px 40px;text-transform:uppercase;white-space:nowrap;border:2px solid var(--fg);transition:.15s}
+  .bcta:hover{background:var(--acc);border-color:var(--acc);color:#fff}
+
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:2px solid var(--fg)}
+  .stat{padding:44px 32px;border-right:2px solid var(--fg)}
+  .stat:last-child{border-right:none}
+  .stat .big{font-size:clamp(34px,5vw,62px);font-weight:800;line-height:1;letter-spacing:-.02em}
+  .stat .lbl{color:var(--mut);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px;font-weight:700}
+
+  .work{padding:80px 0}
+  .work h2{font-weight:800;font-size:clamp(30px,5vw,56px);letter-spacing:-.02em;margin-bottom:8px}
+  .work .sub{color:var(--mut);margin-bottom:46px;font-weight:500}
+  .rows{border-top:2px solid var(--line)}
+  .row{display:flex;align-items:center;gap:24px;padding:26px 8px;border-bottom:2px solid var(--line);transition:.15s}
+  .row:hover{background:#15151a;padding-left:24px}
+  .row .idx{font-size:14px;color:var(--acc);font-weight:800;width:40px}
+  .row .name{font-size:clamp(20px,3vw,30px);font-weight:800;letter-spacing:-.01em;flex:1}
+  .row .desc{color:var(--mut);font-size:14px;max-width:38ch;font-weight:500}
+
+  .final{border:2px solid var(--fg);margin:60px 32px;max-width:1176px;margin-left:auto;margin-right:auto;padding:70px 40px;text-align:center;background:var(--acc)}
+  .final h2{color:#fff;font-weight:800;font-size:clamp(30px,5vw,54px);letter-spacing:-.02em;margin-bottom:22px}
+  .final .bcta{background:#fff;color:#000;border-color:#fff}
+  .final .bcta:hover{background:#000;color:#fff;border-color:#000}
+
+  footer{padding:36px 32px;display:flex;justify-content:space-between;color:var(--mut);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;max-width:1240px;margin:0 auto;border-top:2px solid var(--fg);flex-wrap:wrap;gap:12px}
+
+  @media(max-width:760px){.strip{grid-template-columns:1fr}.stat{border-right:none;border-bottom:2px solid var(--fg)}.row .desc{display:none}}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><span class="mono">T</span>ERYX</div>
+    <a class="ncta" href="#">Book a Call</a>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="tag">Facebook &amp; Instagram Ads</span>
+      <h1 class="cond">MORE JOBS.<br><span class="blu">LESS</span> <span class="out">CHASING.</span></h1>
+      <div class="heflex">
+        <p>Referrals dry up. Ads don't. We build the system that keeps local service businesses booked — whether people are talking about you or not.</p>
+        <a class="bcta" href="#">Book a Free Call →</a>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="stat"><div class="big">7 DAYS</div><div class="lbl">Live campaigns</div></div>
+      <div class="stat"><div class="big">1 / NICHE</div><div class="lbl">Your competitors locked out</div></div>
+      <div class="stat"><div class="big">$0 FLUFF</div><div class="lbl">Cost per job or nothing</div></div>
+    </section>
+
+    <section class="work">
+      <h2 class="cond">Who We Run For</h2>
+      <p class="sub">We don't work with everyone. Only where ads print.</p>
+      <div class="rows">
+        <div class="row"><span class="idx">01</span><span class="name cond">Home Services &amp; Trades</span><span class="desc">Roofers, plumbers, HVAC, landscapers — year-round inbound.</span></div>
+        <div class="row"><span class="idx">02</span><span class="name cond">Medical &amp; Dental</span><span class="desc">They book with you, not the office down the street.</span></div>
+        <div class="row"><span class="idx">03</span><span class="name cond">Salons, Spas &amp; Detail</span><span class="desc">New customers every month, not just regulars.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <section class="final">
+    <h2 class="cond">Want jobs coming in<br>while you're on the job?</h2>
+    <a class="bcta" href="#">Book a Free Strategy Call →</a>
+  </section>
+
+  <footer>
+    <span>© 2026 Eryx Labs</span>
+    <span>Keagan Hall · Media Buyer</span>
+  </footer>
+</body>
+</html>
